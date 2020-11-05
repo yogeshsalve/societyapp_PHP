@@ -8,10 +8,10 @@
 <body >
   <div>
   <div class="header">
-  	<h2>Login</h2>
+  	<h2>Member Login</h2>
   </div>
 	 
-  <form method="post" action="login.php">
+  <form method="post" action="memberlogin.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   		<label>Username</label>
@@ -25,7 +25,7 @@
   		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
   	<p>
-  		Not yet a member? <a href="register.php">Sign up</a>
+  		Not yet a member? <a href="memberregister.php">Sign up</a>
   	</p>
   </form>
 </div>
