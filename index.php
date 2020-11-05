@@ -31,6 +31,43 @@
 }
 </style>
 
+
+<!-- style for registration window -->
+<style>
+  .btn {
+      background-color: blue; 
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 55%;
+      opacity: 0.9;
+    }
+
+   /* div{
+      border : 1px solid black;
+      margin-left: 800px;
+      margin-top: 250px;
+      margin-right: 150px;
+
+      background-color: light blue;*/
+
+    }
+    .mem{
+       background-color: cyan; 
+      color: black;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 55%;
+      opacity: 0.9;
+
+    }
+  </style>
+<!-- style for registration window -->
+
 </head>
 <body>
 <marquee><h3>message to flash</h3></marquee>
@@ -42,7 +79,7 @@
 
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">SoftCare</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -123,9 +160,33 @@
 </div>
 <!-- carousel ends -->
   <!-- </div> -->
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
+  <div class="column" >
+    <!-- Registration window -->
+    <table>
+    <div>
+     <form>
+     
+      <center>
+        <br><br>
+        <h1>Registration</h1>
+        <h3>Choose your User Type below</h3>
+          <b>
+        <h1><input type="radio" id="1" name="first" value="member">
+        <label class="mem">Member</label>
+        
+        <input type="radio" id="2"   name="first" value="staff">
+            <label class="mem">Staff</label></h1>
+     </b>
+          <br> <br> 
+
+            <input type="button" class="btn" name="Register" value="Register" align="center">
+            <br> <br> <br> <br> 
+            </center>
+            
+        </form>
+      </div>
+      </table>
+      <!-- registration window -->
   </div>
 </div>
 
