@@ -18,9 +18,16 @@
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 48%;
   padding: 10px;
-  height: 420px; /* Should be removed. Only for demonstration */
+  height: 410px; /* Should be removed. Only for demonstration */
+}
+
+.column1 {
+  float: left;
+  width: 52%;
+  padding: 10px;
+  height: 410px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -90,25 +97,25 @@
       <li class="nav-item active">
         <a class="nav-link"><i class="fa fa-phone" aria-hidden="true">&nbsp;</i><span>Call us :</span> +91-2261567001/02/03<span class="sr-only">(current)</span></a>
       </li>
-
-      <li class="nav-item">
+      &nbsp;&nbsp;
+      <li class="nav-item active">
         <a class="nav-link"><i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><span>Email :</span> info@softcare.com</a>
       </li>
-
-      <li class="nav-item">
+      &nbsp;&nbsp;
+      <li class="nav-item active">
         <a class="nav-link" href="https://www.facebook.com/yogeshbalkrushnasalve/" target="_blank"><i class="fa fa-facebook" aria-hidden="true">&nbsp;</i><span>Facebook</a>
       </li>
-
-      <li class="nav-item">
+      &nbsp;&nbsp;
+      <li class="nav-item active">
         <a class="nav-link" href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube" aria-hidden="true">&nbsp;</i><span>Youtube</a>
       </li>
-
-       <li class="nav-item">
+      &nbsp;&nbsp;
+       <li class="nav-item active">
         <a class="nav-link" href="https://twitter.com/?" target="_blank"><i class="fa fa-twitter" aria-hidden="true">&nbsp;</i><span>Twitter</a>
       </li>
   	  </ul>
-      <ul class="navbar-nav ml-auto">
-       <li class="nav-item" align="right">
+      <ul class="navbar-nav float-md-right">
+       <li class="nav-item active">
         <a class="nav-link" href="#" target="_blank"><i class="fa fa-sign-in" aria-hidden="true">&nbsp;</i><span>Contact Us</a>
       </li>
     </ul>
@@ -116,10 +123,10 @@
   </div>
 </nav>
 <!-- navbar ends -->
-
+<!-- <div class="row ml-5">
 <h2>Place reserved for advertisement </h2>
-
-<div class="row">
+</div> -->
+<div class="row ml-5">
   <div class="column" style="background-color:#aaa;">
 
     <!-- carousel starts -->
@@ -160,15 +167,15 @@
 </div>
 <!-- carousel ends -->
   <!-- </div> -->
-  <div class="column" >
+  <div class="column1" >
     <!-- Registration window -->
-    <table>
+    <table class="table table-bordered">
     <div>
      <form>
      
       <center>
-        <br><br>
-        <h1>Registration</h1>
+        <br>
+        <h1>Welcome User !</h1>
         <h3>Choose your User Type below</h3>
           <b>
         <h1><input type="radio" id="1" name="first" value="member">
@@ -177,13 +184,16 @@
         <input type="radio" id="2"   name="first" value="staff">
             <label class="mem">Staff</label></h1>
      </b>
-          <br> <br> 
+          <br> 
 
             <input type="button" class="btn" name="Register" value="Register" align="center">
-            <br> <br> <br> <br> 
+            <input type="button" class="btn" name="Register" value="Login" align="center">
+            <br> <br> <br> 
+            <!-- <h4>Already registered?</h4><button type="button" class="btn btn-success">Login</button> -->
             </center>
             
         </form>
+
       </div>
       </table>
       <!-- registration window -->

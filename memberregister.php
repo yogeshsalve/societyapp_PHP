@@ -3,14 +3,23 @@
 <html>
 <head>
   <title>Registration</title>
-  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<!-- first container block -->
+<div class="container">
+  hello
+</div>
+<!-- first container block -->
+
+
+
+<div class="container mx-auto">
   <div class="header">
   	<h2>Member Registration</h2>
   </div>
 	
-  <form method="post" action="register.php">
+  <form method="post" action="memberregister.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>Username</label>
@@ -44,7 +53,7 @@
     </div>
     <div class="input-group">
       <label>No of Vehicles</label>
-      <input type="number" name="no_of_vech">
+      <input type="number" name="no_of_veh">
     </div>
 
 
@@ -53,9 +62,10 @@
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>
   	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+  		Already a member? <a href="memberlogin.php">Sign in</a>
   	</p>
    
   </form>
+  </div>
 </body>
 </html>

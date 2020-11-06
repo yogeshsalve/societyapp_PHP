@@ -17,6 +17,10 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
+  $member_name = mysqli_real_escape_string($db, $_POST['member_name']);
+  $flat_no = mysqli_real_escape_string($db, $_POST['flat_no']);
+  $contact_no = mysqli_real_escape_string($db, $_POST['contact_no']);
+  $no_of_veh = mysqli_real_escape_string($db, $_POST['no_of_veh']);
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -28,7 +32,7 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM members WHERE username='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -46,8 +50,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO members (username, email, password,member_name, flat_no, contact_no, no_of_veh) 
+  			  VALUES('$username', '$email', '$password','$member_name','$flat_no', '$contact_no', '$no_of_veh' )";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
@@ -68,12 +72,12 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
     $password = md5($password);
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM members WHERE username='$username' AND password='$password'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: index.php');
+      header('location: index1.php');
     }else {
       array_push($errors, "Wrong username/password combination");
     }
